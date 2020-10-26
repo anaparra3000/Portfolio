@@ -1,0 +1,36 @@
+
+html, body {font-size: 16px;
+    font-family: "HelveticaNeueLTPro-Roman",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+div {
+    display: block;
+}
+
+.homepage .homepage-content .text-container {
+    margin: .625em 0;
+}
+
+.homepage .homepage-content .text-container:first-child {
+    margin-top: 0;
+}
+
+.homepage {
+    height: 100%;
+    min-height: 100vh;
+    text-align: center;
+    letter-spacing: .04em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.375em;
+    line-height: 1.28571em;
+}
+
+homepage .homepage-content {
+    position: relative;
+    margin-top: 90px;
+}
