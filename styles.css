@@ -1,3 +1,9 @@
+@import url('/elements/fonts/victor_moscoso/VICTM___.TTF');
+
+@font-face {
+    font-family:
+    url('/elements/fonts/victor_moscoso/VICTM___.TTF');
+}
 
 .site-nav, .desktop {
     display: flex;
@@ -12,7 +18,7 @@
     line-height: 1.28em;
 }
 
-.site-nav .mobile-nav {
+.site-nav, .mobile-nav {
     padding: .625em 1.25em 1.25em 1.25em;
     height: 7.5em;
     overflow: visible;
@@ -24,6 +30,14 @@
     z-index: 100;
     box-sizing: border-box;
 }
+
+@media (max-width: 40em){
+    .homepage {
+    font-size: 1.5em;
+    }
+}
+
+
 
 .projects-grid p {
     margin: 0 0 1.42857em 0;
@@ -74,10 +88,10 @@ html {
 }
 
 .site-nav, .mobile-nav {
-    height: 4.375em;
+    height:6em;
 }
 
-.site-nav span, .hide, .mobile-nav span .hide {
+.site-nav span .hide .mobile-nav span .hide {
     display: none;
     position: absolute;
     z-index: 2;
@@ -91,18 +105,18 @@ html {
     transform: translate3d(0, 0, 0);
 }
 
-.site-nav span a, .mobile-nav span a {
+.site-nav span a .mobile-nav span a {
     color: #000;
-    text-decoration: underline;
+    text-decoration: none;
     padding-bottom: 5px;
     border-color: #fff;
-                                /* -moz-transition: all .4s ease-out;
-                                -o-transition: all .4s ease-out;
-                                -webkit-transition: all .4s ease-out;
-                                transition: all .4s ease-out; */
+    moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    transition: all .4s ease-out;
 }
 
-a, a:hover, a:visited, a:focus {
+a a:hover a:visited a:focus {
     outline: 0;
 }
 
@@ -116,16 +130,11 @@ a:hover {
     text-decoration: underline;
 }
 
-a:visited {
-    color: #00e;
-}
-
-
 .homepage .homepage-content .text-container:first-child {
     margin-top: 0;
 }
 
-.homepage, .homepage-content, .text-container {
+.homepage .homepage-content .text-container {
     margin: .625em 0;
 }
 
@@ -145,7 +154,7 @@ div {
     line-height: 1.28571em;
 }
 
-.homepage .homepage-content a, .homepage .homepage-content span {
+.homepage .homepage-content a .homepage .homepage-content span {
     position: relative;
     z-index: 10;
     vertical-align: top;
@@ -155,7 +164,7 @@ div {
     display: none !important;
 }
 
-.homepage, .homepage-content, .image-fader {
+.homepage .homepage-content .image-fader {
     top: 0%;
     height: 100%;
 }
@@ -191,12 +200,22 @@ html, body {
     line-height: 1.4;
 }
 
+body {
+    display: block;
+    margin: 8px;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+
 html, button, input, .select, .textarea {
     color: #222;
 }
 
-.page-section--homepage, .page-section--homepage .section-content {
+.page-section--homepage .page-section--homepage .section-content {
     height: 100%;
+    margin-top: 10em;
     min-height: 100vh;
 }
 
@@ -204,13 +223,9 @@ html, button, input, .select, .textarea {
     height: 100%;
 }
 
-@media.section-content {
-    padding: 0 1.25em 0 1.25em;
-}
-
 .section-content {
     width: auto;
-    padding: 0 2.5em 0 2.5em;
+    padding: 5 2.5em 5 2.5em;
 }
 
 .projects-grid {
@@ -242,6 +257,15 @@ html {
 
 .content-rows a {
     color: #000;
+}
+
+.content-rows {
+    max-width: 120em;
+    margin: 0 auto 8.4375em auto;
+}
+
+.content-rows.with-padding {
+    margin-top: 8.4375em;
 }
 
 .content-rows p {
@@ -297,7 +321,7 @@ audio, canvas, img, video {
     vertical-align: middle;
 }
 
-p, pre {
+p pre {
     margin: 1em 0;
 }
 
@@ -310,7 +334,7 @@ p {
 }
 
 .sticknpoke {
-    width: 200px;
+    width: 1000px;
     opacity: 1;
 }
 
@@ -320,10 +344,51 @@ p {
 
 img {
     transition: all 1s;
-    position: absolute;
-    width: 200px;
+    width: 600px;
+    flex-wrap: wrap;
 }
 
 .film {
     width: 200px;
+}
+
+
+.splash {
+    font: '/elements/fonts/victor_moscoso/VICTM___.TTF';
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 200;
+    color: white;
+    text-align: center;
+    line-height: 90vh;
+}
+
+.splash.display-none {
+    position: fixed;
+    opacity: 0;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    z-index: -10;
+    color: white;
+    text-align: center;
+    line-height: 90vh;
+    transition: all 0.5s;  
+}
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
 }

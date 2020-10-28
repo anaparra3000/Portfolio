@@ -1,3 +1,20 @@
+
+let splash = document.querySelector('.splash');
+document.addEventListener('DOMContentLoaded', (e)=>{
+	setTimeout(()=>{
+		splash.classList.add('display-none');
+	}, 2000);
+})
+
+
+let navs = document.querySelectorAll(".site-nav a")
+console.log(navs)
+for (let nav of navs) {
+	navs.onmouseover=function(e){
+		console.log
+	}
+}
+
 let links = document.querySelectorAll(".homepage a")
 console.log(links)
 for (let link of links){
@@ -16,3 +33,4 @@ for (let link of links){
 		document.querySelector(`.${imgClass}`).classList.add("hide")
 	}
 }
+
