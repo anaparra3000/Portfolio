@@ -5,9 +5,16 @@
     url('/elements/fonts/victor_moscoso/VICTM___.TTF');
 }
 
+@media (max-width: 40em) {
+    font-size: 1.5em;
+    }
+  }
+
+
 .site-nav, .desktop {
     display: flex;
 }
+
 .site-nav span, .mobile-nav span {
     display: block;
     position: relative;
@@ -31,13 +38,6 @@
     box-sizing: border-box;
 }
 
-@media (max-width: 40em){
-    .homepage {
-    font-size: 1.5em;
-    }
-}
-
-
 
 .projects-grid p {
     margin: 0 0 1.42857em 0;
@@ -58,14 +58,6 @@ html {
     font-size: 4.375em;
 }
 
-.site-nav span i, .mobile-nav span i {
-    display: block;
-    font-style: normal;
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
 
 .site-nav, .mobile-nav {
     height: 7.5em;
@@ -97,7 +89,7 @@ html {
     z-index: 2;
     top: 0;
     font-family: "HelveticaNeueLTPro-Roman",sans-serif;
-    font-style: normal;
+    font-style: normal ;
     font-weight: 400;
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
@@ -121,9 +113,9 @@ a a:hover a:visited a:focus {
 }
 
 a:-webkit-any-link {
-    color: -webkit-link;
+    color: black;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 a:hover {
@@ -154,15 +146,12 @@ div {
     line-height: 1.28571em;
 }
 
-.homepage .homepage-content a .homepage .homepage-content span {
+.homepage .homepage-content a, .homepage .homepage-content span {
     position: relative;
     z-index: 10;
     vertical-align: top;
 }
 
-.homepage .homepage-content .image-fader {
-    display: none !important;
-}
 
 .homepage .homepage-content .image-fader {
     top: 0%;
@@ -365,6 +354,10 @@ img {
     color: white;
     text-align: center;
     line-height: 90vh;
+}
+
+.splash a {
+    filter: invert(1);
 }
 
 .splash.display-none {
