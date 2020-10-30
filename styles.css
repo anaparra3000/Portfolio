@@ -198,9 +198,6 @@ body {
     margin-left: 8px;
 }
 
-html, button, input, .select, .textarea {
-    color: #222;
-}
 
 .page-section--homepage .page-section--homepage .section-content {
     height: 100%;
@@ -322,9 +319,15 @@ p {
     margin-inline-end: 0px;
 }
 
-.sticknpoke {
-    width: 1000px;
-    opacity: 1;
+.me {
+    width: 600px;
+    opacity: .5;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 300px;
+    bottom: 50px;
+
 }
 
 .hide {
@@ -384,4 +387,10 @@ img {
 .fade-in {
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
+}
+
+.hover img {
+    position: absolute;
+    z-index: 1000;
+    
 }

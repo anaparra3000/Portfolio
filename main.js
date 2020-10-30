@@ -25,16 +25,3 @@ for (let link of links){
 	}
 }
 
-let portf = document.querySelectorAll(".project a")
-console.log(portf)
-for (let port of portf){
-	port.onmouseover=function(e){
-		let imgClass = this.getAttribute("data")
-		document.querySelector(`.${imgClass}`).classList.remove("hide")
-	}
-	port.onmouseover=function(e){
-		let imgClass = this.getAttribute("data")
-		document.querySelector(`.${imgClass}`).classList.add("hide")
-	}
-}
-
